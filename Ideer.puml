@@ -84,5 +84,10 @@ Leggings -up-|> Armor
 
 Player o-- Armor
 
+' Enemy classes
+
+class Enemy {
+    
+}
 
 @enduml
