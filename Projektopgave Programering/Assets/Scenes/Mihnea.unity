@@ -195,6 +195,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7128170441015902081, guid: 94cb2f463ca474248aa187c90d116feb, type: 3}
+      propertyPath: spheres.Array.data[0].isHead
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
