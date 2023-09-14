@@ -1,0 +1,94 @@
+@startuml Car
+
+class Player {
+    + int health
+    - movement()
+}
+
+'Weapon classes
+
+class Weapon {
+    
+}
+
+class MeleeWeapon {
+    
+}
+
+class RangedWeapon {
+    
+}
+
+class  Sword {
+    
+}
+
+class LongBow {
+    
+}
+
+class ShortBow {
+    
+}
+
+class Dagger {
+    
+}
+
+class Axe {
+    
+}
+
+class Rapier {
+    
+}
+
+class MagicStaff {
+    
+}
+
+Player o-- Weapon
+
+RangedWeapon -up-|> Weapon
+MeleeWeapon -up-|> Weapon
+
+Sword -up-|> MeleeWeapon
+Axe -up-|> MeleeWeapon
+Dagger -up-|> MeleeWeapon
+Rapier -up-|> MeleeWeapon
+
+LongBow -up-|> RangedWeapon
+ShortBow -up-|> RangedWeapon
+MagicStaff -up-|> RangedWeapon
+
+'Armor classes
+
+Class Armor {
+    
+}
+
+class Helmet {
+    
+}
+
+class Chestplate {
+    
+}
+
+class Leggings {
+    
+}
+
+Helmet -up-|> Armor 
+Chestplate -up-|> Armor
+Leggings -up-|> Armor
+
+Player o-- Armor
+
+' Enemy classes
+
+class Enemy {
+    
+}
+
+@enduml

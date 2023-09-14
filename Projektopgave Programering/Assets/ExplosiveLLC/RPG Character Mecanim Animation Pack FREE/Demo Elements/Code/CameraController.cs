@@ -16,11 +16,11 @@ namespace RPGCharacterAnims
 		public float cameraTargetOffsetY;
 		private Vector3 cameraTargetOffset;
 		public float rotateSpeed = 2.0f;
-		private float rotate;
+		private float rotate = 0f;
 		public float height = 6.0f;
 		public float distance = 5.0f;
 		public float zoomAmount = 0.1f;
-		public float smoothing = 2.0f;
+		public float smoothing = 0f;
 		private Vector3 offset;
 		private bool following = true;
 		private Vector3 lastPosition;
@@ -102,12 +102,12 @@ namespace RPGCharacterAnims
 			else if (inputMouseScrollDown) { distance -= zoomAmount; height -= zoomAmount; }
 
 			// Set cameraTargetOffset as cameraTarget + cameraTargetOffsetY.
-			cameraTargetOffset = cameraTarget.transform.position + new Vector3(0, cameraTargetOffsetY, 0);
+			//cameraTargetOffset = cameraTarget.transform.position + new Vector3(0, cameraTargetOffsetY, 0);
 
 			// Smoothly look at cameraTargetOffset.
-			transform.rotation = Quaternion.Slerp(transform.rotation,
-				Quaternion.LookRotation(cameraTargetOffset - transform.position),
-				Time.deltaTime * smoothing);
+			//transform.rotation = Quaternion.Slerp(transform.rotation,
+			//	Quaternion.LookRotation(cameraTargetOffset - transform.position),
+			//	Time.deltaTime * smoothing);
 		}
 
 		private void CameraFollow()
