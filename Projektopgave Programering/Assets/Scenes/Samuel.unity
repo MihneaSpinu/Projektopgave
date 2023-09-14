@@ -859,6 +859,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e6fed619f3109e45b40d02672b50b17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Damage: 10
+  Range: 2
+  AttackRate: 1
 --- !u!23 &1931891031
 MeshRenderer:
   m_ObjectHideFlags: 0
