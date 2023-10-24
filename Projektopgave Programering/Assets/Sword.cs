@@ -16,6 +16,14 @@ public class Sword : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //input.GetKey(KeyCode.Mouse0);
+        if (Input.GetMouseButton(0))
+        {
+            Attack();
+        }
+    }
+
+    void Attack()
+    {
+    
     }
 }
