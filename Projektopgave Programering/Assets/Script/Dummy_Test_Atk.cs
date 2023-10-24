@@ -15,7 +15,7 @@ public class Dummy_Test_Atk : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
+      
         if (Input.GetKeyDown(KeyCode.D))
         {
             TakeDamage(10);
@@ -25,7 +25,7 @@ public class Dummy_Test_Atk : MonoBehaviour
         {
             Heal(10);
         }
-        */
+    
     }
 
     public void TakeDamage(int damage)
