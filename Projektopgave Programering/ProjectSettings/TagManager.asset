@@ -6,7 +6,6 @@ TagManager:
   tags:
   - Shadow
   - Collide
-  - "Player\tattack"
   layers:
   - Default
   - TransparentFX
