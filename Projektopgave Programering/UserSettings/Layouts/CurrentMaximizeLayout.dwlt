@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 517
+  controlID: 66
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -394,9 +394,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -34.920795, y: 26.02233, z: 81.66416}
+    m_Target: {x: -10.175578, y: 4.4906645, z: 74.94122}
     speed: 2
-    m_Value: {x: -34.920795, y: 26.02233, z: 81.66416}
+    m_Value: {x: -10.175579, y: 4.490664, z: 74.94122}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -437,18 +437,18 @@ MonoBehaviour:
         m_Value: 0
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
-      m_Size: {x: 0.5, y: 0.5}
+      m_Size: {x: 1, y: 1}
     m_ShowGrid: 1
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.2240763, y: 0.77551883, z: -0.40257373, w: 0.43167508}
+    m_Target: {x: 0.11718971, y: -0.80887616, z: 0.17240061, w: 0.5498018}
     speed: 2
-    m_Value: {x: 0.22467445, y: 0.7748516, z: -0.4022274, w: 0.43282735}
+    m_Value: {x: 0.113887876, y: -0.8098888, z: 0.16754271, w: 0.5504901}
   m_Size:
-    m_Target: 0.054998554
+    m_Target: 0.69066334
     speed: 2
-    m_Value: 0.054998554
+    m_Value: 0.69066334
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -466,8 +466,8 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 0
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: 0.2906911, y: 0.18510436, z: -0.057431765, w: 0.9369959}
-  m_LastSceneViewOrtho: 0
+  m_LastSceneViewRotation: {x: 0.072868995, y: 0.92685866, z: -0.24844925, w: 0.27184516}
+  m_LastSceneViewOrtho: 1
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
   m_SceneVisActive: 1
@@ -497,7 +497,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 518
+  controlID: 67
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -522,7 +522,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 519
+  controlID: 68
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -586,9 +586,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 92e0ffff
-      m_LastClickedID: -8046
-      m_ExpandedIDs: 02e6ffff58e6ffffc4e6ffff88e9ffff
+      m_SelectedIDs: ea600000
+      m_LastClickedID: 24810
+      m_ExpandedIDs: 02e6ffff58e6ffffc4e6ffff88e9ffff18f2ffff1cf2ffff20f2ffff24f2ffff7cf2ffff80f2ffff84f2ffffa8f2ffffacf2ffffb4f2ffffccf2ffff2afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -604,7 +604,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 0}
+        m_ClientGUIView: {fileID: 5}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -639,7 +639,7 @@ MonoBehaviour:
   - {fileID: 8}
   - {fileID: 9}
   m_Selected: 0
-  m_LastSelected: 1
+  m_LastSelected: 2
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -820,7 +820,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -829,15 +829,15 @@ MonoBehaviour:
     y: 465.6
     width: 1100.8
     height: 265.19998
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 11}
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 11}
   - {fileID: 12}
   - {fileID: 13}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -883,7 +883,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Materials
+    - Assets/ExplosiveLLC/RPG Character Mecanim Animation Pack FREE/Prefabs/Character
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -891,16 +891,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Materials
+  - Assets/ExplosiveLLC/RPG Character Mecanim Animation Pack FREE/Prefabs/Character
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Programmering\Projektopgave\Projektopgave Programering
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 00250000
-    m_LastClickedID: 9472
-    m_ExpandedIDs: 00000000e4240000e8240000ec240000f0240000f8240000fc2400009c740000a0740000a2740000a4740000a6740000a8740000aa7400001875000000ca9a3b
+    scrollPos: {x: 0, y: 367.80002}
+    m_SelectedIDs: 58620000
+    m_LastClickedID: 25176
+    m_ExpandedIDs: 00000000a0610000a2610000a4610000a6610000a8610000aa610000ac610000ae610000b0610000b2610000b4610000b6610000b8610000ba610000da6100004a62000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -928,7 +928,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 78600000
     m_LastClickedID: 24696
-    m_ExpandedIDs: 00000000e4240000e8240000ec240000f0240000f8240000fc2400009c7400009e740000a0740000a2740000a4740000a6740000a8740000aa740000ac74000000ca9a3b
+    m_ExpandedIDs: 00000000a0610000a2610000a4610000a6610000a8610000aa610000ac610000ae610000b0610000b2610000b4610000b6610000b8610000ba610000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -953,8 +953,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 92e0ffff
-    m_LastClickedInstanceID: -8046
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300006e5900007e5900007a5900006a590000665900007659000072590000c6660000
     m_RenameOverlay:
@@ -1054,7 +1054,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -8046
+  m_LastSelectedObjectID: 24810
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1123,7 +1123,7 @@ MonoBehaviour:
     m_ControlHash: 1412526313
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 447.20007
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
@@ -1191,7 +1191,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 30.200012}
     m_SelectedIDs: 66610000
     m_LastClickedID: 24934
-    m_ExpandedIDs: 00000000e4240000e8240000ec240000f0240000f8240000fc2400009c7400009e740000a0740000a2740000a4740000a6740000a8740000aa740000ac74000000ca9a3b
+    m_ExpandedIDs: 00000000a0610000a2610000a4610000a6610000a8610000aa610000ac610000ae610000b0610000b2610000b4610000b6610000b8610000ba610000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1219,7 +1219,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e4240000e8240000ec240000f0240000f8240000fc2400009c7400009e740000a0740000a2740000a4740000a6740000a8740000aa740000ac74000000ca9a3b
+    m_ExpandedIDs: 00000000a0610000a2610000a4610000a6610000a8610000aa610000ac610000ae610000b0610000b2610000b4610000b6610000b8610000ba610000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
