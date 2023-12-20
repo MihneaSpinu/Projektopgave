@@ -6,6 +6,7 @@ public class Dummy_Test_Atk : MonoBehaviour
 {
     [SerializeField] private int health = 100;
     [SerializeField] private float damageDelay = 1f; // delay in seconds
+    [SerializeField] private int damage = 10;
     private bool canTakeDamage = true;
     
     // Start is called before the first frame update
@@ -25,7 +26,7 @@ public class Dummy_Test_Atk : MonoBehaviour
         if (collision.gameObject && canTakeDamage)
         {
             StartCoroutine(DamageDelay());
-            TakeDamage(10);
+            TakeDamage(damage);
             Debug.Log("I took damage");
         }
     }
