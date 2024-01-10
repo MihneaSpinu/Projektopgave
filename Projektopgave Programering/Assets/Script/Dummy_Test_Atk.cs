@@ -21,9 +21,9 @@ public class Dummy_Test_Atk : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter(Collision collision)
+private void OnTriggerEnter(Collider other) 
     {
-        if (collision.gameObject && canTakeDamage)
+        if (other.gameObject.CompareTag("seard") && canTakeDamage)
         {
             StartCoroutine(DamageDelay());
             TakeDamage(damage);
