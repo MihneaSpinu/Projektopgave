@@ -12,10 +12,10 @@ public class Gamemaneger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space))
         {
             GameObject DammageTextInstance = Instantiate(dammageTextPrefab, enemyInstance.transform);
-            DammageTextInstance.transform.Getchild(0).GetComponent<TextMeshPro>().setText(textToDisplay);
+            DammageTextInstance.transform.GetChild(0).GetComponent<TextMeshPro>().SetText(textToDisplay);
         }
     }
 }
