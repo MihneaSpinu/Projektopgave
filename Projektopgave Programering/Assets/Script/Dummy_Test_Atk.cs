@@ -62,8 +62,10 @@ private void OnTriggerEnter(Collider other)
     }
 }
 
+/*
 CanvasRect = GameObject.Find("Canvas").GetComponent<RectTransform>();
         GameObject healthBar = Instantiate(healthBarPrefab, new Vector3(0, 0, 0), Quaternion.identity);
         healthBar.transform.SetParent(CanvasRect.transform, false);
         healthBar.transform.position = new Vector3(healthBar.transform.position.x + 130, healthBar.transform.position.y + 20, healthBar.transform.position.z);
         healthBar.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+*/
