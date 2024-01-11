@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Projektopgave Programering/Assets/Scenes/Testscene.unity.meta
 guid: 4c5d3bd8c7c2f2d4ebcbe6f27233a24e
+========
+guid: b1654cdc752ce0f4a8376414b76fcc79
+>>>>>>>> MihneaBranch:Projektopgave Programering/Assets/Scenes/MainMenu.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

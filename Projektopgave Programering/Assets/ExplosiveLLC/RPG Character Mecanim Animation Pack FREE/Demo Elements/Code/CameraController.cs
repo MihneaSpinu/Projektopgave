@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 #if ENABLE_INPUT_SYSTEM
 // Requires installing the InputSystem Package from the Package Manager: https://docs.unity3d.com/Packages/com.unity.inputsystem@1.5/manual/Installation.html
 using UnityEngine.InputSystem;
@@ -16,7 +16,7 @@ namespace RPGCharacterAnims
 		public float cameraTargetOffsetY;
 		private Vector3 cameraTargetOffset;
 		public float rotateSpeed = 2.0f;
-		private float rotate;
+		private float rotate = 0f;
 		public float height = 6.0f;
 		public float distance = 5.0f;
 		public float zoomAmount = 0.1f;
@@ -101,7 +101,13 @@ namespace RPGCharacterAnims
 			if (inputMouseScrollUp) { distance += zoomAmount; height += zoomAmount; }
 			else if (inputMouseScrollDown) { distance -= zoomAmount; height -= zoomAmount; }
 
-			
+			// Set cameraTargetOffset as cameraTarget + cameraTargetOffsetY.
+			//cameraTargetOffset = cameraTarget.transform.position + new Vector3(0, cameraTargetOffsetY, 0);
+
+			// Smoothly look at cameraTargetOffset.
+			//transform.rotation = Quaternion.Slerp(transform.rotation,
+			//	Quaternion.LookRotation(cameraTargetOffset - transform.position),
+			//	Time.deltaTime * smoothing);
 		}
 
 		private void CameraFollow()
