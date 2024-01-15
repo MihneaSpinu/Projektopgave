@@ -53,7 +53,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   animationSpeed: 1
   ikHands: {fileID: 0}
-  target: {fileID: 0}
+  target: {fileID: 400004, guid: b1cc94d26cd016d479aa5b522d88da0a, type: 3}
   rightWeapon: 0
   leftWeapon: 0
 --- !u!54 &5400000
