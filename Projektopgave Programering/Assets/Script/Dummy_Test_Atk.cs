@@ -21,9 +21,9 @@ public class Dummy_Test_Atk : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter(Collision collision)
+private void OnTriggerEnter(Collider other) 
     {
-        if (collision.gameObject && canTakeDamage)
+        if (other.gameObject.CompareTag("seard") && canTakeDamage)
         {
             StartCoroutine(DamageDelay());
             TakeDamage(damage);
@@ -61,3 +61,11 @@ public class Dummy_Test_Atk : MonoBehaviour
         health += healAmount;
     }
 }
+
+/*
+CanvasRect = GameObject.Find("Canvas").GetComponent<RectTransform>();
+        GameObject healthBar = Instantiate(healthBarPrefab, new Vector3(0, 0, 0), Quaternion.identity);
+        healthBar.transform.SetParent(CanvasRect.transform, false);
+        healthBar.transform.position = new Vector3(healthBar.transform.position.x + 130, healthBar.transform.position.y + 20, healthBar.transform.position.z);
+        healthBar.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+*/
