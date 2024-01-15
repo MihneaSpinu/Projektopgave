@@ -78,6 +78,8 @@ namespace RPGCharacterAnims
 			#endif
 		}
 
+
+
 		private void Update()
 		{
 			if (!cameraTarget) { return; }
@@ -96,7 +98,7 @@ namespace RPGCharacterAnims
 			if (inputRotateL) { rotate = -1; }
 			else if (inputRotateR) { rotate = 1; }
 			else { rotate = 0; }
-
+			
 			// Mouse zoom.
 			if (inputMouseScrollUp) { distance += zoomAmount; height += zoomAmount; }
 			else if (inputMouseScrollDown) { distance -= zoomAmount; height -= zoomAmount; }
@@ -114,9 +116,11 @@ namespace RPGCharacterAnims
 		{
 			offset = Quaternion.AngleAxis(rotate * rotateSpeed, Vector3.up) * offset;
 
-			transform.position = new Vector3(Mathf.Lerp(lastPosition.x, cameraTarget.transform.position.x + offset.x, smoothing * Time.deltaTime),
-				Mathf.Lerp(lastPosition.y, cameraTarget.transform.position.y + offset.y * height, smoothing * Time.deltaTime),
-				Mathf.Lerp(lastPosition.z, cameraTarget.transform.position.z + offset.z * distance, smoothing * Time.deltaTime));
+			Vector3 targetPosition = cameraTarget.transform.position + offset;
+			Quaternion targetRotation = Quaternion.LookRotation(cameraTarget.transform.position - targetPosition, Vector3.up);
+
+			transform.position = Vector3.Lerp(lastPosition, targetPosition, smoothing * Time.deltaTime);
+			transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, smoothing * Time.deltaTime);
 		}
 
 		private void LateUpdate()
