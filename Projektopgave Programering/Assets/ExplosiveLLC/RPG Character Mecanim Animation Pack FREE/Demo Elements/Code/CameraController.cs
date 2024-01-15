@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 #if ENABLE_INPUT_SYSTEM
 // Requires installing the InputSystem Package from the Package Manager: https://docs.unity3d.com/Packages/com.unity.inputsystem@1.5/manual/Installation.html
 using UnityEngine.InputSystem;
@@ -16,11 +16,11 @@ namespace RPGCharacterAnims
 		public float cameraTargetOffsetY;
 		private Vector3 cameraTargetOffset;
 		public float rotateSpeed = 2.0f;
-		private float rotate;
+		private float rotate = 0f;
 		public float height = 6.0f;
 		public float distance = 5.0f;
 		public float zoomAmount = 0.1f;
-		public float smoothing = 2.0f;
+		public float smoothing = 0f;
 		private Vector3 offset;
 		private bool following = true;
 		private Vector3 lastPosition;
@@ -78,6 +78,8 @@ namespace RPGCharacterAnims
 			#endif
 		}
 
+
+
 		private void Update()
 		{
 			if (!cameraTarget) { return; }
@@ -96,27 +98,29 @@ namespace RPGCharacterAnims
 			if (inputRotateL) { rotate = -1; }
 			else if (inputRotateR) { rotate = 1; }
 			else { rotate = 0; }
-
+			
 			// Mouse zoom.
 			if (inputMouseScrollUp) { distance += zoomAmount; height += zoomAmount; }
 			else if (inputMouseScrollDown) { distance -= zoomAmount; height -= zoomAmount; }
 
 			// Set cameraTargetOffset as cameraTarget + cameraTargetOffsetY.
-			cameraTargetOffset = cameraTarget.transform.position + new Vector3(0, cameraTargetOffsetY, 0);
+			//cameraTargetOffset = cameraTarget.transform.position + new Vector3(0, cameraTargetOffsetY, 0);
 
 			// Smoothly look at cameraTargetOffset.
-			transform.rotation = Quaternion.Slerp(transform.rotation,
-				Quaternion.LookRotation(cameraTargetOffset - transform.position),
-				Time.deltaTime * smoothing);
+			//transform.rotation = Quaternion.Slerp(transform.rotation,
+			//	Quaternion.LookRotation(cameraTargetOffset - transform.position),
+			//	Time.deltaTime * smoothing);
 		}
 
 		private void CameraFollow()
 		{
 			offset = Quaternion.AngleAxis(rotate * rotateSpeed, Vector3.up) * offset;
 
-			transform.position = new Vector3(Mathf.Lerp(lastPosition.x, cameraTarget.transform.position.x + offset.x, smoothing * Time.deltaTime),
-				Mathf.Lerp(lastPosition.y, cameraTarget.transform.position.y + offset.y * height, smoothing * Time.deltaTime),
-				Mathf.Lerp(lastPosition.z, cameraTarget.transform.position.z + offset.z * distance, smoothing * Time.deltaTime));
+			Vector3 targetPosition = cameraTarget.transform.position + offset;
+			Quaternion targetRotation = Quaternion.LookRotation(cameraTarget.transform.position - targetPosition, Vector3.up);
+
+			transform.position = Vector3.Lerp(lastPosition, targetPosition, smoothing * Time.deltaTime);
+			transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, smoothing * Time.deltaTime);
 		}
 
 		private void LateUpdate()

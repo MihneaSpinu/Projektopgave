@@ -4,5 +4,15 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
-  m_configObjects: {}
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: b1654cdc752ce0f4a8376414b76fcc79
+  - enabled: 1
+    path: Assets/ExplosiveLLC/RPG Character Mecanim Animation Pack FREE/Scenes/RPG-Character.unity
+    guid: 0c997d4567ac01447875ab0b9e9ac340
+  - enabled: 1
+    path: Assets/Scenes/TutorialMap.unity
+    guid: 5aee57a75b695e44f93456f667792445
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 57e79f8a58bdf0b4e89e1d475fe63d2d, type: 2}
