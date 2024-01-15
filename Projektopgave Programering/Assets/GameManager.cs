@@ -16,6 +16,14 @@ public class Gamemaneger : MonoBehaviour
         {
             GameObject DammageTextInstance = Instantiate(dammageTextPrefab, enemyInstance.transform);
             DammageTextInstance.transform.GetChild(0).GetComponent<TextMeshPro>().SetText(textToDisplay);
+            
+            Vector3 direction = (Camera.main.transform.position - DammageTextInstance.transform.position).normalized;
+            DammageTextInstance.transform.GetChild(0).rotation = Quaternion.LookRotation(direction);
+
+        
+            Vector3 scale = DammageTextInstance.transform.GetChild(0).localScale;
+            DammageTextInstance.transform.GetChild(0).localScale = new Vector3(-scale.x, scale.y, scale.z);
+            
         }
     }
 }
