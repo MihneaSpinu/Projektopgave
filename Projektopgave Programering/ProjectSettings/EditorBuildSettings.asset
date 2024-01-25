@@ -7,15 +7,15 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
-    guid: b1654cdc752ce0f4a8376414b76fcc79
-  - enabled: 1
-    path: Assets/ExplosiveLLC/RPG Character Mecanim Animation Pack FREE/Scenes/RPG-Character.unity
-    guid: 0c997d4567ac01447875ab0b9e9ac340
-  - enabled: 1
-    path: Assets/Scenes/TutorialMap.unity
-    guid: 5aee57a75b695e44f93456f667792445
+    guid: ca18da0ca23341240a55985deede8277
   - enabled: 1
     path: Assets/Scenes/TutorialScreen.unity
     guid: 1ca2b9958e12b3d4b804f9bb5b5683ec
+  - enabled: 1
+    path: Assets/Scenes/Gameplay 1.unity
+    guid: faf207d350e2231419df05ec3d241406
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: fee45a82fa6469d408b25929613eed22
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 57e79f8a58bdf0b4e89e1d475fe63d2d, type: 2}
