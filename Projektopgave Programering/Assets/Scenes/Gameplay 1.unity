@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4278,6 +4278,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 6748678197030510743, guid: a4bb2f2a617eef7468d0e4eea75d1c0c, type: 3}
+      propertyPath: health
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4801,6 +4805,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 610613317}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &883587532 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5859191325373906838, guid: a4bb2f2a617eef7468d0e4eea75d1c0c, type: 3}
+  m_PrefabInstance: {fileID: 816623075}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &947670937
 GameObject:
   m_ObjectHideFlags: 0
@@ -7780,6 +7789,7 @@ GameObject:
   - component: {fileID: 1838301466}
   - component: {fileID: 1838301465}
   - component: {fileID: 1838301464}
+  - component: {fileID: 1838301468}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -7880,6 +7890,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 60, y: 0, z: 0}
+--- !u!114 &1838301468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838301463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e3f997db22d4a046878c36cde401d1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dammageTextPrefab: {fileID: 2170016207584610097, guid: 631a577ad91561f4caf0e3250c43955f, type: 3}
+  enemyInstance: {fileID: 883587532}
+  textToDisplay: 10
 --- !u!43 &1873575450
 Mesh:
   m_ObjectHideFlags: 0
