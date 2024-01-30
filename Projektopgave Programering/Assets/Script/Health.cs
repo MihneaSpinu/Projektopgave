@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -49,6 +50,7 @@ private void OnTriggerEnter(Collider other)
     {
         Debug.Log("I died");
         Destroy(gameObject);
+        SceneManager.LoadScene("GameOver");
     }
 
     public int GetHealth()
