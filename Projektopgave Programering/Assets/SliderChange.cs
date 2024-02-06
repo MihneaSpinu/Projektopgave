@@ -9,6 +9,11 @@ public class SliderChange : MonoBehaviour
     public Slider slider;
     public TextMeshProUGUI sliderText;
 
+    void Start()
+    {
+        slider.value = Health.health;
+    }
+
     // Update is called once per frame
     void Update()
     {
