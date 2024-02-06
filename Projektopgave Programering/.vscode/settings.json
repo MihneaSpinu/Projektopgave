@@ -52,7 +52,7 @@
         "Temp/": true
     },
     "dotnet.defaultSolution": "Projektopgave Programering.sln",
-    "workbench.colorCustomizations": {
+   /* "workbench.colorCustomizations": {
         "activityBar.activeBackground": "#0098ff",
         "activityBar.background": "#0098ff",
         "activityBar.foreground": "#e7e7e7",
@@ -72,5 +72,5 @@
         "titleBar.inactiveForeground": "#e7e7e799"
     },
     "peacock.color": "#007acc",
-    "dotnet.preferCSharpExtension": true
+    "dotnet.preferCSharpExtension": true */
 }

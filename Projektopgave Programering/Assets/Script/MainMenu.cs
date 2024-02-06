@@ -13,11 +13,16 @@ public class MainMenu : MonoBehaviour
     
     public void PlayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("Gameplay 1");
     }
 
-    public void Tutorial()
+        public void TutorialScreen()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+        SceneManager.LoadScene("TutorialScreen");
+    }
+
+        public void mainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }

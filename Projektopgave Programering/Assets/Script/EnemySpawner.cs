@@ -4,23 +4,33 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    
     public GameObject enemyPrefab;
-    public bool isSpawning = true;
-    
+    public bool isSpawning = false;
     public float enemyInterval = 1f;
 
-    // Start is called before the first frame update
-    void Start()
+    private void OnTriggerEnter(Collider other)
     {
-        StartCoroutine(spawnEnemy(enemyInterval, enemyPrefab));
+        if (other.CompareTag("Player"))
+        {
+            isSpawning = true;
+            StartCoroutine(SpawnEnemy(enemyInterval, enemyPrefab));
+        }
     }
 
-    private IEnumerator spawnEnemy(float interval, GameObject enemy)
+    private void OnTriggerExit(Collider other)
     {
-        if (!isSpawning) yield break;
-        yield return new WaitForSeconds(interval);
-        GameObject newEnemy = Instantiate(enemy, transform.position, Quaternion.identity);
-        StartCoroutine(spawnEnemy(interval, enemy));
+        if (other.CompareTag("Player"))
+        {
+            isSpawning = false;
+        }
+    }
+
+    private IEnumerator SpawnEnemy(float interval, GameObject enemy)
+    {
+        while (isSpawning)
+        {
+            yield return new WaitForSeconds(interval);
+            GameObject newEnemy = Instantiate(enemy, transform.position, Quaternion.identity);
+        }
     }
 }
