@@ -15,6 +15,7 @@ public class Health : MonoBehaviour
     void Start()
     {
         //Start the coroutine we define below named ExampleCoroutine.
+        health = 100;
 
     }
     // Update is called once per frame
